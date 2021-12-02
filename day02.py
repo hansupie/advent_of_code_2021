@@ -5,6 +5,7 @@ with open("input2.txt") as file:
 
 vertical_pos = 0
 horizontal_pos = 0
+aim = 0
 
 for line in depth_list:
     command = line.split()[0]
@@ -12,12 +13,13 @@ for line in depth_list:
 
     if command == "forward":
         horizontal_pos += amount
+        vertical_pos += amount * aim
 
     if command == "down":
-        vertical_pos += amount
+        aim += amount
     
     if command == "up":
-        vertical_pos -= amount
+        aim -= amount
 
 print(vertical_pos)
 print(horizontal_pos)
