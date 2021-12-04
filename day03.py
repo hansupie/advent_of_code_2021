@@ -39,9 +39,7 @@ def find_oxygen_rating(binary_list, pos):
         new_list = []
 
         for binary in binary_list:
-            bin_list = []
-            bin_list[:0] = binary
-            bin_int = int(bin_list[pos])
+            bin_int = int(binary[pos])
             if bin_int == common:
                 new_list.append(binary)
 
